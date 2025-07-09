@@ -1,4 +1,5 @@
-<div class=" md:px-[120px] md:py-[100px]
+<div class=" mx-auto max-w-[1200px]
+md:px-[120px] md:py-[100px]
 sm:px-[50px]
 py-[40px] px-[20px] font-[playfair] text-center flex flex-col items-center justify-center gap-y-[30px]">
     
@@ -16,7 +17,7 @@ py-[40px] px-[20px] font-[playfair] text-center flex flex-col items-center justi
     </div>
 
     <img src="{{ asset('build/assets/webmap.svg') }}" alt="" class="
-     h-full object-cover w-full">
+     h-full object-cover w-full max-w-[1000px]">
 
     <p class=" md:text-4xl md:leading-[43px]
     sm:text-2xl sm:leading-[29px]
