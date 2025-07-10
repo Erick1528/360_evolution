@@ -7,7 +7,7 @@
     <div class="hidden
     md:flex justify-between items-center max-w-[443px] w-full font-bold text-base text-white uppercase">
         <a href="">INICIO</a>
-        <a href="">SOBRE NOSOTROS</a>
+        <a href="{{ route('aboutus') }}">SOBRE NOSOTROS</a>
         <a href="">LIBROS</a>
         <a href="">CONTACTO</a>
     </div>
