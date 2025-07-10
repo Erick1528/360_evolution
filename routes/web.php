@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\AboutUs;
+use App\Http\Controllers\AboutUsController;
 use App\Livewire\Settings\Appearance;
 use App\Livewire\Settings\Password;
 use App\Livewire\Settings\Profile;
@@ -21,4 +23,6 @@ Route::middleware(['auth'])->group(function () {
     Route::get('settings/appearance', Appearance::class)->name('settings.appearance');
 });
 
-require __DIR__.'/auth.php';
+Route::get('aboutus', [AboutUsController::class, 'index'])->name('aboutus');
+
+require __DIR__ . '/auth.php';
