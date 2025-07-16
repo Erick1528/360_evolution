@@ -3,11 +3,13 @@ sm:px-[50px]
 px-[20px] py-[40px] font-[montserrat]">
 
     {{-- Cards --}}
-    <div class=" xl:flex-row xl:justify-between xl:gap-x-[40px]
+    <div
+        class=" 2xl:gap-x-[60px] 
+    xl:flex-row xl:justify-start xl:gap-x-[40px]
     flex flex-col gap-y-[40px] mb-[65px]">
 
         {{-- Card --}}
-        <div class=" xl:max-w-[570px] xl:flex-1
+        <div class="  xl:flex-1
         flex m-0">
 
             <div class=" min-w-[10px] rounded-l-[20px] bg-[#0F355E]"></div>
@@ -36,7 +38,7 @@ px-[20px] py-[40px] font-[montserrat]">
         </div>
 
         {{-- Card --}}
-        <div class=" xl:max-w-[570px] xl:flex-1
+        <div class="  xl:flex-1
         flex m-0">
 
             <div class=" min-w-[10px] rounded-l-[20px] bg-[#0F355E]"></div>
