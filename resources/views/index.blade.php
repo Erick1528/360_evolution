@@ -7,5 +7,5 @@
 @endsection
 
 @section('content')
-    <livewire:map-section />
+    {{-- <livewire:map-section /> --}}
 @endsection
