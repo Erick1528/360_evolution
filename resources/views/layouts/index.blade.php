@@ -28,8 +28,6 @@
     <link rel="preload" href="{{ asset('build/assets/closemenu.svg') }}" as="image">
     <link rel="preload" href="{{ asset('build/assets/menu.svg') }}" as="image">
 
-    @vite('resources/css/app.css')
-    @vite('resources/js/app.js')
     @livewireStyles
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
