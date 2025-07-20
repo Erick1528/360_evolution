@@ -9,7 +9,8 @@ px-[20px] py-[40px] font-[montserrat]">
     flex flex-col gap-y-[40px] mb-[65px]">
 
         {{-- Card --}}
-        <div class="  xl:flex-1
+        <div class="  shadow-[2px_2px_4px_rgba(0,0,0,0.1)] rounded-r-[10px]
+        xl:flex-1
         flex m-0">
 
             <div class=" min-w-[10px] rounded-l-[20px] bg-[#0F355E]"></div>
@@ -38,7 +39,8 @@ px-[20px] py-[40px] font-[montserrat]">
         </div>
 
         {{-- Card --}}
-        <div class="  xl:flex-1
+        <div class="  shadow-[2px_2px_4px_rgba(0,0,0,0.1)] rounded-r-[10px]
+        xl:flex-1
         flex m-0">
 
             <div class=" min-w-[10px] rounded-l-[20px] bg-[#0F355E]"></div>
@@ -66,7 +68,7 @@ px-[20px] py-[40px] font-[montserrat]">
     </div>
 
     {{-- Biography --}}
-    <div class="">
+    <div class=" shadow-[2px_2px_4px_rgba(0,0,0,0.1)] rounded-[10px]">
 
         {{-- Top --}}
         <div
@@ -74,7 +76,7 @@ px-[20px] py-[40px] font-[montserrat]">
 
             <img src="{{ asset('build/assets/rudito.webp') }}"
                 alt="Imagen de Ronald Menjivar (Escritor y Autor de Evolución 360°)"
-                class=" w-[258px] h-[258px] rounded-full object-cover mx-auto">
+                class=" w-[258px] h-auto sm:h-[258px] rounded-full object-cover mx-auto">
 
             <h1 class=" text-center font-bold text-[28px] leading-[34px] ">Ronald Camilo
                 Menjivar Guerra</h1>
