@@ -30,7 +30,7 @@ xl:h-[700px] w-full relative">
             sm:h-auto leading-[27px] sm:leading-[32px]">
                 Más que un libro, una filosofía de vida.</p>
 
-            <a href=""
+            <a href="{{ route('discover') }}"
                 class=" w-[300px] h-[76px]
             sm:w-[380px] sm:h-[76px] sm:m-0 p-[30px]
             mt-[10px] xl:px-[40px] xl:py-[30px] bg-[#103457] rounded-[20px] xl:w-[500px] xl:h-[100px] flex items-center justify-center">
