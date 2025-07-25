@@ -29,7 +29,7 @@
                     <p class=" text-[14px] leading-[17px] ">Ant</p>
                 </button>
 
-                <div class="flex gap-x-[10px]">
+                <div class="gap-x-[10px] hidden xs:flex">
                     @foreach ($this->paginationDots as $pageNumber)
                         <div
                             class="w-[12px] h-[12px] rounded-full {{ $pageNumber == $actual_img ? 'bg-[#0F355E]' : 'bg-[#D9D9D9]' }}">
