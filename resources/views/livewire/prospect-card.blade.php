@@ -14,19 +14,19 @@
 
             <div class=" flex justify-center items-center mb-[36px]">
                 <img src="{{ asset('build/assets/prospect_images/' . $actual_img . '.jpg') }}" alt=""
-                    class=" h-[400px] w-[283] object-cover aspect-[283/400]">
+                    class=" w-[196px] h-[277.34px] xs:h-[400px] xs:w-[283px] object-cover aspect-[283/400]">
             </div>
 
             <div class=" flex justify-between items-center">
 
                 <button wire:click="previousPage"
-                    class=" {{ $actual_img === 1 ? 'bg-[#EEEEEE] text-[rgba(0,0,0,0.40)]' : 'bg-[#0F355E] text-white' }} flex items-center justify-center px-[20px] py-[10px] rounded-[20px] w-[84px] h-[44px]">
+                    class=" {{ $actual_img === 1 ? 'bg-[#EEEEEE] text-[rgba(0,0,0,0.40)]' : 'bg-[#0F355E] text-white' }} flex items-center justify-center px-[20px] py-[10px] rounded-[20px] xs:w-[84px] xs:h-[44px]">
                     @if ($actual_img === 1)
                         <img src="{{ asset('build/assets/forward.svg') }}" alt="" class=" rotate-180">
                     @else
-                        <img src="{{ asset('build/assets/back.svg') }}" alt="">
+                        <img src="{{ asset('build/assets/back.svg') }}" alt="" class="">
                     @endif
-                    <p class=" text-[14px] leading-[17px] ">Ant</p>
+                    <p class=" text-[14px] leading-[17px] xs:flex hidden">Ant</p>
                 </button>
 
                 <div class="gap-x-[10px] hidden xs:flex">
@@ -38,8 +38,8 @@
                 </div>
 
                 <button wire:click="nextPage"
-                    class=" {{ $actual_img === $total_pages ? 'bg-[#EEEEEE] text-[rgba(0,0,0,0.40)]' : 'bg-[#0F355E] text-white' }} flex items-center justify-center px-[20px] py-[10px] rounded-[20px] w-[84px] h-[44px]">
-                    <p class=" text-[14px] leading-[17px] ">Sig</p>
+                    class=" {{ $actual_img === $total_pages ? 'bg-[#EEEEEE] text-[rgba(0,0,0,0.40)]' : 'bg-[#0F355E] text-white' }} flex items-center justify-center px-[20px] py-[10px] rounded-[20px] xs:w-[84px] xs:h-[44px]">
+                    <p class=" text-[14px] leading-[17px] xs:flex hidden">Sig</p>
                     @if ($actual_img === $total_pages)
                         <img src="{{ asset('build/assets/forward.svg') }}" alt="" class=" opacity-40">
                     @else
