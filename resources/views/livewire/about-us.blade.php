@@ -105,7 +105,7 @@ px-[20px] py-[40px] font-[montserrat]">
 
                 {{-- Title --}}
                 <div class=" flex gap-x-[12px]">
-                    <div class=" w-[5px] bg-[#0F355E] h-[34px]"></div>
+                    <div class=" w-[5px] bg-[#0F355E] h-auto min-h-full"></div>
                     <h4 class=" font-[playfair] text-[#0F355E] font-bold text-[28px] leading-[34px]">Origen y Formación
                     </h4>
                 </div>
@@ -145,7 +145,7 @@ px-[20px] py-[40px] font-[montserrat]">
 
                 {{-- Title --}}
                 <div class=" flex gap-x-[12px]">
-                    <div class=" w-[5px] bg-[#0F355E] h-[34px]"></div>
+                    <div class=" w-[5px] bg-[#0F355E] h-auto min-h-full"></div>
                     <h4 class=" font-[playfair] text-[#0F355E] font-bold text-[28px] leading-[34px]">Juventud y
                         Liderazgo</h4>
                 </div>
@@ -174,7 +174,7 @@ px-[20px] py-[40px] font-[montserrat]">
 
                 {{-- Title --}}
                 <div class=" flex gap-x-[12px]">
-                    <div class=" w-[5px] bg-[#0F355E] h-[34px]"></div>
+                    <div class=" w-[5px] bg-[#0F355E] h-auto min-h-full"></div>
                     <h4 class=" font-[playfair] text-[#0F355E] font-bold text-[28px] leading-[34px]">Trayectoria
                         Profesional</h4>
                 </div>
@@ -200,7 +200,7 @@ px-[20px] py-[40px] font-[montserrat]">
 
                 {{-- Title --}}
                 <div class=" flex gap-x-[12px]">
-                    <div class=" w-[5px] bg-[#0F355E] h-[34px]"></div>
+                    <div class=" w-[5px] bg-[#0F355E] h-auto min-h-full"></div>
                     <h4 class=" font-[playfair] text-[#0F355E] font-bold text-[28px] leading-[34px]">Actualidad y Legado
                     </h4>
                 </div>
