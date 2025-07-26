@@ -8,7 +8,7 @@ xl:h-[700px] w-full relative">
          xl:max-h-[700px] w-full object-bottom">
 
     <div
-        class=" pt-[60px] px-[75px] pb-0
+        class=" pt-[40px] px-[50px] pb-0
     flex-col-reverse sm:px-[115px] sm:pt-[100px] sm:w-full sm:h-full
     xl:px-[124px] xl:pt-[80px] xl:pb-[30px] h-full absolute top-0 left-0 flex xl:flex-row items-center justify-center w-full">
 
@@ -18,7 +18,7 @@ xl:h-[700px] w-full relative">
 
         <div
             class="sm:max-w-[538px] sm:mb-[62px] mb-[28px]
-         text-white flex flex-col items-center justify-center text-center max-h-[399px] h-full max-w-[594px] w-full">
+         text-white flex flex-col items-center justify-center text-center  h-full max-w-[594px] w-full">
 
             <h1
                 class=" hidden xl:flex
@@ -26,15 +26,15 @@ xl:h-[700px] w-full relative">
                 EVOLUCIÓN 360°</h1>
 
             <p
-                class=" sm:text-[26px] w-full font-normal sm:mb-[22px] text-[22px] mb-[10px] max-h-[54px] 
+                class=" sm:text-[26px] w-full font-normal sm:mb-[22px] text-[22px] mb-[10px]  
             sm:h-auto leading-[27px] sm:leading-[32px]">
                 Más que un libro, una filosofía de vida.</p>
 
             <a href="{{ route('discover') }}"
-                class=" w-[300px] h-[76px]
+                class=" w-[260px] h-[76px]
             sm:w-[380px] sm:h-[76px] sm:m-0 p-[30px]
             mt-[10px] xl:px-[40px] xl:py-[30px] bg-[#103457] rounded-[20px] xl:w-[500px] xl:h-[100px] flex items-center justify-center">
-                <p class=" font-bold text-3xl sm:text-2xl text-[18px]">Descubre Evolución 360°</p>
+                <p class=" font-bold text-3xl xl:text-2xl sm:text-[18px] text-[14px]">Descubre Evolución 360°</p>
             </a>
         </div>
 
