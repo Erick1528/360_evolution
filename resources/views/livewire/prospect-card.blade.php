@@ -6,44 +6,54 @@
     <div class="  p-8 text-center flex flex-col gap-y-[36px] bg-[#F8F8F8] rounded-r-[10px] w-full">
 
         <div class=" flex flex-col gap-y-[15px] text-[#0F355E]">
-            <h2 class=" text-[28px] font-bold leading-[34px] ">Prospecto Ilustrativo - Evolución 360º</h2>
+            <h2 class=" sm:text-[32px] sm:leading-[38px]
+            text-[28px] font-bold leading-[34px] ">Prospecto
+                Ilustrativo - Evolución 360º</h2>
             <p class=" text-[12px] leading-[14px] text-[#475569]">Paginas {{ $actual_img }} de {{ $total_pages }}</p>
         </div>
 
         <div class="">
 
             <div class=" flex justify-center items-center mb-[36px]">
-                <img src="{{ asset('build/assets/prospect_images/' . $actual_img . '.jpg') }}" alt=""
-                    class=" w-[196px] h-[277.34px] xs:h-[400px] xs:w-[283px] object-cover aspect-[283/400]">
+                <img src="{{ asset('build/assets/prospect_images/' . $actual_img . '.webp') }}" alt=""
+                    class=" sm:w-[400px] sm:h-[622px]
+                    w-[196px] h-[277.34px] xs:h-[400px] xs:w-[283px] object-cover aspect-[283/400]">
             </div>
 
-            <div class=" flex justify-between items-center">
+            <div class=" max-w-[394px] mx-auto 
+            flex justify-between items-center">
 
                 <button wire:click="previousPage"
-                    class=" {{ $actual_img === 1 ? 'bg-[#EEEEEE] text-[rgba(0,0,0,0.40)]' : 'bg-[#0F355E] text-white' }} flex items-center justify-center px-[20px] py-[10px] rounded-[20px] xs:w-[84px] xs:h-[44px]">
+                    class=" {{ $actual_img === 1 ? 'bg-[#EEEEEE] text-[rgba(0,0,0,0.40)]' : 'bg-[#0F355E] text-white' }} flex items-center justify-center px-[20px] py-[10px] rounded-[20px] xs:w-[84px] xs:h-[44px] sm:h-auto sm:w-auto">
                     @if ($actual_img === 1)
-                        <img src="{{ asset('build/assets/forward.svg') }}" alt="" class=" rotate-180">
+                        <img src="{{ asset('build/assets/forward.svg') }}" alt=""
+                            class=" rotate-180 sm:h-[22ppx] sm:w-[22px] mr-[5px]">
                     @else
-                        <img src="{{ asset('build/assets/back.svg') }}" alt="" class="">
+                        <img src="{{ asset('build/assets/back.svg') }}" alt="" class="sm:h-[22ppx] sm:w-[22px]">
                     @endif
-                    <p class=" text-[14px] leading-[17px] xs:flex hidden">Ant</p>
+                    <p class=" text-[14px] leading-[17px] xs:flex hidden sm:hidden">Ant</p>
+                    <p class=" text-[14px] leading-[17px] sm:flex hidden">Anterior</p>
                 </button>
 
                 <div class="gap-x-[10px] hidden xs:flex">
                     @foreach ($this->paginationDots as $pageNumber)
                         <div
-                            class="w-[12px] h-[12px] rounded-full {{ $pageNumber == $actual_img ? 'bg-[#0F355E]' : 'bg-[#D9D9D9]' }}">
+                            class=" sm:h-[14px] sm:w-[14px]
+                            w-[12px] h-[12px] rounded-full {{ $pageNumber == $actual_img ? 'bg-[#0F355E]' : 'bg-[#D9D9D9]' }}">
                         </div>
                     @endforeach
                 </div>
 
                 <button wire:click="nextPage"
-                    class=" {{ $actual_img === $total_pages ? 'bg-[#EEEEEE] text-[rgba(0,0,0,0.40)]' : 'bg-[#0F355E] text-white' }} flex items-center justify-center px-[20px] py-[10px] rounded-[20px] xs:w-[84px] xs:h-[44px]">
-                    <p class=" text-[14px] leading-[17px] xs:flex hidden">Sig</p>
+                    class=" {{ $actual_img === $total_pages ? 'bg-[#EEEEEE] text-[rgba(0,0,0,0.40)]' : 'bg-[#0F355E] text-white' }} flex items-center justify-center px-[20px] py-[10px] rounded-[20px] xs:w-[84px] xs:h-[44px] sm:h-auto sm:w-auto">
+                    <p class=" text-[14px] leading-[17px] xs:flex hidden sm:hidden">Sig</p>
+                    <p class=" text-[14px] leading-[17px] sm:flex hidden">Siguiente</p>
                     @if ($actual_img === $total_pages)
-                        <img src="{{ asset('build/assets/forward.svg') }}" alt="" class=" opacity-40">
+                        <img src="{{ asset('build/assets/forward.svg') }}" alt=""
+                            class=" sm:h-[22ppx] sm:w-[22px]">
                     @else
-                        <img src="{{ asset('build/assets/back.svg') }}" alt="" class=" rotate-180">
+                        <img src="{{ asset('build/assets/back.svg') }}" alt=""
+                            class=" rotate-180 sm:h-[22ppx] sm:w-[22px]">
                     @endif
                 </button>
 
@@ -56,9 +66,12 @@
                 la Obra Evolución 360º?</p>
 
             <a href="{{ asset('build/assets/prospect.pdf') }}" target="_blank"
-                class=" px-[25px] py-[12px] bg-[#0F355E] text-white rounded-[20px] flex items-center justify-center gap-x-[7px] max-w-[266px]">
-                <img src="{{ asset('build/assets/book.svg') }}" alt="">
-                <p class=" text-[18px] leading-[22px]">Ver Prospecto Completo</p>
+                class=" sm:max-w-full
+                px-[25px] py-[12px] bg-[#0F355E] text-white rounded-[20px] flex items-center justify-center gap-x-[7px] max-w-[266px]">
+                <img src="{{ asset('build/assets/book.svg') }}" alt="" class=" sm:h-[28px] sm:w-[28px]">
+                <p class=" sm:text-[20px] sm:leading-[24px]
+                text-[18px] leading-[22px]">Ver Prospecto
+                    Completo</p>
             </a>
 
             <p class=" text-[11px] leading-[13px] text-[rgba(0,0,0,0.60)] italic">Estas son páginas de muestra. El
