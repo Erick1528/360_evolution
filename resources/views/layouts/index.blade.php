@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description"
+        content="Global Editorial EA es una editorial especializada en impresión de libros, comprometida con la excelencia, la educación y el desarrollo cultural en América Latina.">
 
     {{-- Montserrat font --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,7 +25,7 @@
 
     {{-- Favicon --}}
     <link rel="icon" type="image/svg+xml" href="{{ asset('build/assets/logo.svg') }}">
-    
+
     {{-- Preload menu icons --}}
     <link rel="preload" href="{{ asset('build/assets/closemenu.svg') }}" as="image">
     <link rel="preload" href="{{ asset('build/assets/menu.svg') }}" as="image">
@@ -33,7 +35,7 @@
 </head>
 
 <body>
-    
+
     <header class=" w-full font-[montserrat]">
         <livewire:nav-bar />
         @yield('banner')
