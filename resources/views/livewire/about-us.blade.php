@@ -6,6 +6,7 @@ px-[20px] py-[40px] font-[montserrat]">
     <div
         class=" 2xl:gap-x-[60px] 
     xl:flex-row xl:justify-start xl:gap-x-[40px]
+    sm:gap-y-[60px]
     flex flex-col gap-y-[40px] mb-[65px]">
 
         {{-- Card --}}
@@ -15,9 +16,11 @@ px-[20px] py-[40px] font-[montserrat]">
 
             <div class=" min-w-[10px] rounded-l-[20px] bg-[#0F355E]"></div>
 
-            <div class=" p-5 bg-[#F8F8F8] rounded-r-[10px] flex flex-col justify-center items-center gap-y-[20px]">
+            <div class=" p-[32px] bg-[#F8F8F8] rounded-r-[10px] flex flex-col justify-center items-center gap-y-[20px]">
 
-                <h2 class=" text-[#0F355E] font-bold font-[playfair] text-[32px] leading-[38px]">MISIÓN</h2>
+                <h2
+                    class=" text-[#0F355E] font-bold font-[playfair] text-[28px] leading-[34px] sm:text-[32px] sm:leading-[38px]">
+                    MISIÓN</h2>
 
                 <div class=" text-[14px] flex flex-col gap-y-[5px]">
                     <p>Global Editorial EA nace como un faro de conocimiento, inspiración y humanidad. Nuestro propósito
@@ -45,9 +48,11 @@ px-[20px] py-[40px] font-[montserrat]">
 
             <div class=" min-w-[10px] rounded-l-[20px] bg-[#0F355E]"></div>
 
-            <div class=" p-5 bg-[#F8F8F8] rounded-r-[10px] flex flex-col justify-center items-center gap-y-[20px]">
+            <div class=" p-[32px] bg-[#F8F8F8] rounded-r-[10px] flex flex-col justify-center items-center gap-y-[20px]">
 
-                <h2 class=" text-[#0F355E] font-bold font-[playfair] text-[32px] leading-[38px]">VISIÓN</h2>
+                <h2
+                    class=" text-[#0F355E] font-bold font-[playfair] text-[28px] leading-[34px] sm:text-[32px] sm:leading-[38px]">
+                    VISIÓN</h2>
 
                 <div class=" text-[14px] flex flex-col gap-y-[5px]">
                     <p>Global Editorial EA aspira a ser un referente internacional en la creación de contenidos que
@@ -78,7 +83,10 @@ px-[20px] py-[40px] font-[montserrat]">
                 alt="Imagen de Ronald Menjivar (Escritor y Autor de Evolución 360°)"
                 class=" w-[258px] h-auto sm:h-[258px] rounded-full object-cover mx-auto">
 
-            <h1 class=" text-center font-bold text-[28px] leading-[34px] ">Ronald Camilo
+            <h1
+                class=" sm:text-[32px] sm:leading-[38px] 
+            text-center font-bold text-[28px] leading-[34px] ">
+                Ronald Camilo
                 Menjivar Guerra</h1>
 
             {{-- Tags --}}
@@ -99,14 +107,17 @@ px-[20px] py-[40px] font-[montserrat]">
         </div>
 
         {{-- Bottom --}}
-        <div class=" text-[14px] leading-[17px] p-[20px] flex flex-col gap-y-[20px] bg-[#F8F8F8] rounded-b-[10px]">
+        <div class=" text-[14px] leading-[17px] p-[32px] flex flex-col gap-y-[20px] bg-[#F8F8F8] rounded-b-[10px]">
 
             <div class=" flex flex-col gap-y-[15px]">
 
                 {{-- Title --}}
                 <div class=" flex gap-x-[12px]">
                     <div class=" w-[5px] bg-[#0F355E] h-auto min-h-full"></div>
-                    <h4 class=" font-[playfair] text-[#0F355E] font-bold text-[28px] leading-[34px]">Origen y Formación
+                    <h4
+                        class=" sm:text-[32px] sm:leading-[38px] 
+                    font-[playfair] text-[#0F355E] font-bold text-[28px] leading-[34px]">
+                        Origen y Formación
                     </h4>
                 </div>
 
@@ -146,7 +157,10 @@ px-[20px] py-[40px] font-[montserrat]">
                 {{-- Title --}}
                 <div class=" flex gap-x-[12px]">
                     <div class=" w-[5px] bg-[#0F355E] h-auto min-h-full"></div>
-                    <h4 class=" font-[playfair] text-[#0F355E] font-bold text-[28px] leading-[34px]">Juventud y
+                    <h4
+                        class=" sm:text-[32px] sm:leading-[38px] 
+                    font-[playfair] text-[#0F355E] font-bold text-[28px] leading-[34px]">
+                        Juventud y
                         Liderazgo</h4>
                 </div>
 
@@ -175,7 +189,10 @@ px-[20px] py-[40px] font-[montserrat]">
                 {{-- Title --}}
                 <div class=" flex gap-x-[12px]">
                     <div class=" w-[5px] bg-[#0F355E] h-auto min-h-full"></div>
-                    <h4 class=" font-[playfair] text-[#0F355E] font-bold text-[28px] leading-[34px]">Trayectoria
+                    <h4
+                        class=" sm:text-[32px] sm:leading-[38px] 
+                    font-[playfair] text-[#0F355E] font-bold text-[28px] leading-[34px]">
+                        Trayectoria
                         Profesional</h4>
                 </div>
 
@@ -201,7 +218,10 @@ px-[20px] py-[40px] font-[montserrat]">
                 {{-- Title --}}
                 <div class=" flex gap-x-[12px]">
                     <div class=" w-[5px] bg-[#0F355E] h-auto min-h-full"></div>
-                    <h4 class=" font-[playfair] text-[#0F355E] font-bold text-[28px] leading-[34px]">Actualidad y Legado
+                    <h4
+                        class=" sm:text-[32px] sm:leading-[38px] 
+                    font-[playfair] text-[#0F355E] font-bold text-[28px] leading-[34px]">
+                        Actualidad y Legado
                     </h4>
                 </div>
 
