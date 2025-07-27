@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\AboutUs;
 use App\Http\Controllers\AboutUsController;
 use App\Http\Controllers\DiscoverController;
 use App\Livewire\Settings\Appearance;
