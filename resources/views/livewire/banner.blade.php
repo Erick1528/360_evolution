@@ -12,7 +12,7 @@ xl:h-[700px] w-full relative">
     flex-col-reverse sm:px-[115px] sm:pt-[100px] sm:w-full sm:h-full
     xl:px-[124px] xl:pt-[80px] xl:pb-[30px] h-full absolute top-0 left-0 flex xl:flex-row items-center justify-center w-full">
 
-        <img src="{{ asset('build/assets/libro.png') }}" alt=""
+        <img src="{{ asset('build/assets/libro.webp') }}" alt=""
             class=" sm:m-0 max-w-[300px] max-h-[400px]
         xl:mt-[50px] xl:mr-[130px] sm:max-w-[439px] sm:max-h-[586px] w-full h-full object-cover">
 
