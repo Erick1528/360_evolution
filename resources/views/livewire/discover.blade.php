@@ -1,4 +1,6 @@
-<div class=" sm:px-[50px] sm:gap-y-[60px]
+<div
+    class=" lg:px-[120px] lg:py-[100px] lg:gap-y-[90px]
+sm:px-[50px] sm:gap-y-[60px]
 px-[20px] py-[40px] flex flex-col gap-y-[40px] font-[playfair]">
 
     {{-- Card --}}
@@ -6,19 +8,26 @@ px-[20px] py-[40px] flex flex-col gap-y-[40px] font-[playfair]">
 
         <div class=" min-w-[10px] rounded-l-[20px] bg-[#0F355E]"></div>
 
-        <div class="  p-8 text-center flex flex-col gap-y-[36px] bg-[#F8F8F8] rounded-r-[10px]">
+        <div class="  p-8 text-center flex flex-col gap-y-[36px] bg-[#F8F8F8] rounded-r-[10px] w-full">
 
-            <div class=" flex flex-col gap-y-[15px] text-[#0F355E]">
+            <div class=" lg:text-[36px] lg:leading-[43px]
+            flex flex-col gap-y-[15px] text-[#0F355E]">
                 <h2 class=" sm:text-[32px] sm:leading-[38px]
                 text-[28px] font-bold leading-[34px] ">
                     Evolución 360º</h2>
-                <h3 class=" sm:text-[20px] sm:leading-[24px]
-                text-[18px] leading-[22px] font-bold">El
+                <h3
+                    class=" lg:text-2xl lg:leading-[29px]
+                sm:text-[20px] sm:leading-[24px]
+                text-[18px] leading-[22px] font-bold">
+                    El
                     Proyecto que Conecta tu Generosidad con el Futuro de
                     una Generación</h3>
             </div>
 
-            <p class=" text-[14px] leading-[17px] font-[montserrat]">Imagina este instante: un auditorio lleno de jóvenes
+            <p
+                class=" lg:text-base lg:leading-[20px] lg:max-w-[946px] lg:mx-auto
+            text-[14px] leading-[17px] font-[montserrat]">
+                Imagina este instante: un auditorio lleno de jóvenes
                 que, por primera vez, sienten que sus sueños caben
                 en el mundo. Mientras recitan sus metas en voz alta, un libro Azul descansa en sus manos, marcando el
                 comienzo de una nueva historia. Ese libro no se vende; se regala con sentido. <span
@@ -47,12 +56,15 @@ px-[20px] py-[40px] flex flex-col gap-y-[40px] font-[playfair]">
         <div class="  p-8 text-center flex flex-col gap-y-[36px] bg-[#F8F8F8] rounded-r-[10px] w-full">
 
             <h2
-                class=" sm:text-[32px] sm:leading-[38px]
+                class=" lg:text-4xl lg:leading-[43px]
+                sm:text-[32px] sm:leading-[38px]
             text-[28px] font-bold leading-[34px] text-[#0F355E]">
                 Hoy puedes regalar el privilegio de creer
             </h2>
 
-            <p class=" text-[14px] leading-[17px] font-[montserrat]">No compres un libro; regala un horizonte. No vendas
+            <p class=" lg:text-base lg:leading-[20px] lg:max-w-[778px] lg:mx-auto lg:w-full
+            text-[14px] leading-[17px] font-[montserrat]">No
+                compres un libro; regala un horizonte. No vendas
                 una idea; siembra futuro. Haz tu donativo y conviértete en el aliado que toda historia de éxito recuerda
                 al final.</p>
 
