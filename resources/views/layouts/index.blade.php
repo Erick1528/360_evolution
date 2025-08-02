@@ -44,6 +44,10 @@
         @yield('content')
     </main>
 
+    <livewire:footer />
+
+    {{-- Scripts --}}
+
     @livewireScripts
 </body>
 
