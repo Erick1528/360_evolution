@@ -17,8 +17,8 @@
 
         <div class="flex flex-col justify-center items-center h-full font-bold text-base text-white uppercase gap-y-8">
             <a href="/" class="hover:text-gray-300 transition-colors">INICIO</a>
+            <a href="{{ route('discover') }}" class="hover:text-gray-300 transition-colors">DESCUBRIR</a>
             <a href="{{ route('aboutus') }}" class="hover:text-gray-300 transition-colors">SOBRE NOSOTROS</a>
-            <a href="" class="hover:text-gray-300 transition-colors">LIBROS</a>
             <a href="" class="hover:text-gray-300 transition-colors">CONTACTO</a>
         </div>
     </div>
@@ -27,8 +27,8 @@
         class="hidden
     md:flex justify-between items-center max-w-[443px] w-full font-bold text-base text-white uppercase">
         <a href="/">INICIO</a>
+        <a href="{{ route('discover') }}">DESCUBRIR</a>
         <a href="{{ route('aboutus') }}">SOBRE NOSOTROS</a>
-        <a href="">LIBROS</a>
         <a href="">CONTACTO</a>
     </div>
 </nav>
