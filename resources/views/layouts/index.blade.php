@@ -34,7 +34,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body>
+<body class="min-h-screen grid grid-rows-[auto_1fr_auto]">
 
     <header class=" w-full font-[montserrat]">
         <livewire:nav-bar />
