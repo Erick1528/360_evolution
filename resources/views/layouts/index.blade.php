@@ -37,6 +37,7 @@
 <body class="min-h-screen grid grid-rows-[auto_1fr_auto]">
 
     <header class=" w-full font-[montserrat]">
+        <livewire:construction-bar />
         <livewire:nav-bar />
         @yield('banner')
     </header>
