@@ -10,7 +10,7 @@ px-[20px] py-[40px] font-[montserrat]">
     flex flex-col gap-y-[40px] mb-[65px]">
 
         {{-- Card --}}
-        <div class="  shadow-[2px_2px_4px_rgba(0,0,0,0.1)] rounded-r-[10px]
+        <div class="  shadow-[2px_2px_4px_rgba(0,0,0,0.1)] rounded-[10px]
         xl:flex-1
         flex m-0">
 
@@ -42,7 +42,7 @@ px-[20px] py-[40px] font-[montserrat]">
         </div>
 
         {{-- Card --}}
-        <div class="  shadow-[2px_2px_4px_rgba(0,0,0,0.1)] rounded-r-[10px]
+        <div class="  shadow-[2px_2px_4px_rgba(0,0,0,0.1)] rounded-[10px]
         xl:flex-1
         flex m-0">
 

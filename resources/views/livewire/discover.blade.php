@@ -4,7 +4,7 @@ sm:px-[50px] sm:gap-y-[60px]
 px-[20px] py-[40px] flex flex-col gap-y-[40px] font-[playfair]">
 
     {{-- Card --}}
-    <div class="shadow-[2px_2px_4px_rgba(0,0,0,0.1)] rounded-r-[10px] flex">
+    <div class="shadow-[2px_2px_4px_rgba(0,0,0,0.1)] rounded-[10px] flex">
 
         <div class=" min-w-[10px] rounded-l-[20px] bg-[#0F355E]"></div>
 
@@ -49,7 +49,7 @@ px-[20px] py-[40px] flex flex-col gap-y-[40px] font-[playfair]">
     <livewire:how-to-join-card />
 
     {{-- Card --}}
-    <div class="shadow-[2px_2px_4px_rgba(0,0,0,0.1)] rounded-r-[10px] flex">
+    <div class="shadow-[2px_2px_4px_rgba(0,0,0,0.1)] rounded-[10px] flex">
 
         <div class=" min-w-[10px] rounded-l-[20px] bg-[#0F355E]"></div>
 

@@ -1,5 +1,5 @@
 {{-- Card --}}
-<div class="shadow-[2px_2px_4px_rgba(0,0,0,0.1)] rounded-r-[10px] flex w-auto">
+<div class="shadow-[2px_2px_4px_rgba(0,0,0,0.1)] rounded-[10px] flex w-auto">
 
     <div class=" min-w-[10px] rounded-l-[20px] bg-[#0F355E]"></div>
 
