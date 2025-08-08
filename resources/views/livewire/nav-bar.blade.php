@@ -19,7 +19,7 @@
             <a href="/" class="hover:text-gray-300 transition-colors">INICIO</a>
             <a href="{{ route('discover') }}" class="hover:text-gray-300 transition-colors">DESCUBRIR</a>
             <a href="{{ route('aboutus') }}" class="hover:text-gray-300 transition-colors">SOBRE NOSOTROS</a>
-            <a href="" class="hover:text-gray-300 transition-colors">CONTACTO</a>
+            <a href="{{ route('contact') }}" class="hover:text-gray-300 transition-colors">CONTACTO</a>
         </div>
     </div>
 
@@ -29,7 +29,7 @@
         <a href="/">INICIO</a>
         <a href="{{ route('discover') }}">DESCUBRIR</a>
         <a href="{{ route('aboutus') }}">SOBRE NOSOTROS</a>
-        <a href="">CONTACTO</a>
+        <a href="{{ route('contact') }}">CONTACTO</a>
     </div>
 </nav>
 
