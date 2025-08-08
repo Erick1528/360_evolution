@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AboutUsController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DiscoverController;
 use App\Livewire\Settings\Appearance;
 use App\Livewire\Settings\Password;
@@ -26,5 +27,7 @@ Route::middleware(['auth'])->group(function () {
 Route::get('aboutus', [AboutUsController::class, 'index'])->name('aboutus');
 
 Route::get('discover', [DiscoverController::class, 'index'])->name('discover');
+
+Route::get('contact', [ContactController::class, 'index'])->name('contact');
 
 require __DIR__ . '/auth.php';
