@@ -1,33 +1,42 @@
 <?php
 
 use App\Http\Controllers\AboutUsController;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DiscoverController;
-use App\Livewire\Settings\Appearance;
-use App\Livewire\Settings\Password;
-use App\Livewire\Settings\Profile;
 use Illuminate\Support\Facades\Route;
+use Laravel\Socialite\Facades\Socialite;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 Route::get('/', function () {
     return view('index');
 })->name('home');
 
-Route::view('dashboard', 'dashboard')
-    ->middleware(['auth', 'verified'])
-    ->name('dashboard');
-
-Route::middleware(['auth'])->group(function () {
-    Route::redirect('settings', 'settings/profile');
-
-    Route::get('settings/profile', Profile::class)->name('settings.profile');
-    Route::get('settings/password', Password::class)->name('settings.password');
-    Route::get('settings/appearance', Appearance::class)->name('settings.appearance');
-});
-
+// Public pages
 Route::get('aboutus', [AboutUsController::class, 'index'])->name('aboutus');
-
 Route::get('discover', [DiscoverController::class, 'index'])->name('discover');
-
 Route::get('contact', [ContactController::class, 'index'])->name('contact');
 
-require __DIR__ . '/auth.php';
+// Auth
+Route::get('login', [AuthController::class, 'login'])->name('login');
+
+Route::get('/google-auth/redirect', function () {
+    return Socialite::driver('google')->redirect();
+});
+
+Route::get('/google-auth/callback', function () {
+    $user_google = Socialite::driver('google')->user();
+
+    $user = User::updateOrCreate([
+        'google_id' => $user_google->id
+    ],
+        [
+            'name' => $user_google->name,
+            'email' => $user_google->email,
+        ]);
+
+    Auth::login($user);
+
+    return redirect()->route('discover');
+});
