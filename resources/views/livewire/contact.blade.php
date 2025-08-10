@@ -1,6 +1,6 @@
 <div class=" 
 lg:px-[120px] lg:py-[100px]
-sm:px-[50px] sm:py-[40px]
+sm:px-[40px] sm:py-[50px]
 px-[20px] py-[40px] font-[playfair]">
 
     {{-- Card --}}
