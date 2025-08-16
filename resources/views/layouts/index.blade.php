@@ -32,6 +32,7 @@
 
     @livewireStyles
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    {{-- <link rel="stylesheet" href="{{ asset('build/assets/app-BMnDK8dO.css') }}"> --}}
 </head>
 
 <body class="min-h-screen grid grid-rows-[auto_1fr_auto]">

@@ -20,23 +20,34 @@ Route::get('contact', [ContactController::class, 'index'])->name('contact');
 
 // Auth
 Route::get('login', [AuthController::class, 'login'])->name('login');
+Route::get('register', [AuthController::class, 'register'])->name('register');
 
 Route::get('/google-auth/redirect', function () {
-    return Socialite::driver('google')->redirect();
+    // Forzar nueva selección de cuenta y limpiar caché
+    $googleUrl = Socialite::driver('google')->redirect()->getTargetUrl();
+    $googleUrl .= '&prompt=select_account&access_type=offline';
+
+    return redirect($googleUrl);
 });
 
 Route::get('/google-auth/callback', function () {
-    $user_google = Socialite::driver('google')->user();
+    try {
+        $user_google = Socialite::driver('google')->user();
 
-    $user = User::updateOrCreate([
-        'google_id' => $user_google->id
-    ],
-        [
+        $user = User::updateOrCreate([
+            'google_id' => $user_google->id
+        ], [
             'name' => $user_google->name,
             'email' => $user_google->email,
+            'avatar' => $user_google->avatar,
         ]);
 
-    Auth::login($user);
+        Auth::login($user);
 
-    return redirect()->route('discover');
+        session()->flash('success', '¡Has iniciado sesión exitosamente con Google!');
+        return redirect()->route('/'); // Redirigir al home
+    } catch (\Exception $e) {
+        // Si hay error, redirigir al login con mensaje
+        return redirect()->route('login')->with('error', 'Error al iniciar sesión con Google. Inténtalo de nuevo.');
+    }
 });

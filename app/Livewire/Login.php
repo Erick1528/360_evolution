@@ -5,12 +5,14 @@ namespace App\Livewire;
 use Livewire\Component;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\RateLimiter;
+use App\Models\User;
 
 class Login extends Component
 {
 
     public $email;
     public $password;
+    public $showPassword = false;
 
     // Variables para controlar la visibilidad de las alertas
     public $showSuccess = true;
@@ -43,13 +45,23 @@ class Login extends Component
             return;
         }
 
+        // Verificar que la cuenta no este vinculada a Google
+        if ($user = User::where('email', $this->email)->first()) {
+            if ($user->google_id) {
+                session()->flash('error', 'Esta cuenta está vinculada a Google. Inicia sesión con Google.');
+                $this->email = ''; // Limpiar el campo de email
+                $this->password = ''; // Limpiar el campo de contraseña
+                return;
+            }
+        }
+
         // Intentar autenticación
         if (Auth::attempt(['email' => $this->email, 'password' => $this->password])) {
             session()->regenerate(); // Regenerar sesión para mayor seguridad
             RateLimiter::clear($rateLimiterKey); // Limpiar intentos fallidos
             $this->password = ''; // Limpiar contraseña
             session()->flash('success', '¡Has iniciado sesión correctamente!');
-            return;
+            return redirect()->route('/'); // Redirigir al home
         }
 
         // Incrementar contador de intentos fallidos
@@ -59,6 +71,11 @@ class Login extends Component
 
         // Retornar error genérico
         session()->flash('error', 'El correo o la contraseña no son correctos.');
+    }
+
+    public function togglePasswordVisibility()
+    {
+        $this->showPassword = !$this->showPassword;
     }
 
     public function render()
