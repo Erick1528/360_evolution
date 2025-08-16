@@ -45,7 +45,7 @@ Route::get('/google-auth/callback', function () {
         Auth::login($user);
 
         session()->flash('success', '¡Has iniciado sesión exitosamente con Google!');
-        return redirect()->route('/'); // Redirigir al home
+        return redirect()->route('login');
     } catch (\Exception $e) {
         // Si hay error, redirigir al login con mensaje
         return redirect()->route('login')->with('error', 'Error al iniciar sesión con Google. Inténtalo de nuevo.');
