@@ -5,14 +5,14 @@
             class=" xl:w-[171px] xl:h-[116px] w-[129px] h-[88px]">
     </a>
 
-    <img src="{{ asset('build/assets/menu.svg') }}" alt="" class=" md:hidden w-[50px] h-[50px] z-70" id="menu">
+    <img src="{{ asset('build/assets/menu.svg') }}" alt="" class=" lg:hidden w-[50px] h-[50px] z-70" id="menu">
 
     <!-- Overlay opaco -->
-    <div class="fixed inset-0 bg-black/50 z-40 md:hidden opacity-0 pointer-events-none transition-opacity duration-300"
+    <div class="fixed inset-0 bg-black/50 z-40 lg:hidden opacity-0 pointer-events-none transition-opacity duration-300"
         id="menu-overlay"></div>
 
     {{-- Menu móvil --}}
-    <div class="fixed w-[70%] h-[100%] z-50 bg-[#0F355E] md:hidden top-0 right-0 transform translate-x-full transition-transform duration-300 ease-in-out shadow-2xl"
+    <div class="fixed w-[70%] h-[100%] z-50 bg-[#0F355E] lg:hidden top-0 right-0 transform translate-x-full transition-transform duration-300 ease-in-out shadow-2xl"
         id="menu-mobile">
 
         <div class="flex flex-col justify-center items-center h-full font-bold text-base text-white uppercase gap-y-8">
@@ -20,16 +20,18 @@
             <a href="{{ route('discover') }}" class="hover:text-gray-300 transition-colors">DESCUBRIR</a>
             <a href="{{ route('aboutus') }}" class="hover:text-gray-300 transition-colors">SOBRE NOSOTROS</a>
             <a href="{{ route('contact') }}" class="hover:text-gray-300 transition-colors">CONTACTO</a>
+            <a href="{{ route('login') }}" class="hover:text-gray-300 transition-colors">INICIAR SESIÓN</a>
         </div>
     </div>
 
     <div
         class="hidden
-    md:flex justify-between items-center max-w-[443px] w-full font-bold text-base text-white uppercase">
+    lg:flex justify-between items-center max-w-[600px] w-full font-bold text-base text-white uppercase">
         <a href="/">INICIO</a>
         <a href="{{ route('discover') }}">DESCUBRIR</a>
         <a href="{{ route('aboutus') }}">SOBRE NOSOTROS</a>
         <a href="{{ route('contact') }}">CONTACTO</a>
+        <a href="{{ route('login') }}">INICIAR SESIÓN</a>
     </div>
 </nav>
 
