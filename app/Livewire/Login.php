@@ -61,7 +61,8 @@ class Login extends Component
             RateLimiter::clear($rateLimiterKey); // Limpiar intentos fallidos
             $this->password = ''; // Limpiar contraseña
             session()->flash('success', '¡Has iniciado sesión correctamente!');
-            return redirect()->route('login'); // Redirigir al home
+            // return redirect()->route('login'); // Redirigir al home
+            return redirect()->route('auth.profile');
         }
 
         // Incrementar contador de intentos fallidos

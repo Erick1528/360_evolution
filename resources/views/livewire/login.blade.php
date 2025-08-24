@@ -33,13 +33,13 @@ px-[20px] py-[40px] font-[playfair]">
                         con Google</p>
                 </a>
 
-                <div
+                {{-- <a href="/facebook-auth/redirect"
                     class=" border-[1px] border-[#D1D5DB] rounded-[10px] bg-white flex justify-center items-center py-[12px] px-[20px]  w-full gap-x-[8px] hover:cursor-pointer">
                     <img src="{{ asset('build/assets/facebook.svg') }}" alt="" class=" h-[16px] w-[16px]">
                     <p class=" lg:text-base lg:leading-[19px]
                     text-[14px] leading-[17px]">Continuar
                         con Facebook</p>
-                </div>
+                </a> --}}
 
             </div>
 
