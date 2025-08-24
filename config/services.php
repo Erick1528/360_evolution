@@ -42,5 +42,13 @@ return [
         //     'verify' => false, // Solo para desarrollo - NO usar en producción
         // ],
     ],
+    'facebook' => [
+        'client_id' => env('FACEBOOK_CLIENT_ID'),
+        'client_secret' => env('FACEBOOK_CLIENT_SECRET'),
+        'redirect' => 'http://test.com:8000/facebook-auth/callback',
+        'guzzle' => [
+            'verify' => false, // Solo para desarrollo - NO usar en producción
+        ],
+    ],
 
 ];
