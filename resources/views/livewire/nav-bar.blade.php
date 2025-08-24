@@ -20,7 +20,14 @@
             <a href="{{ route('discover') }}" class="hover:text-gray-300 transition-colors">DESCUBRIR</a>
             <a href="{{ route('aboutus') }}" class="hover:text-gray-300 transition-colors">SOBRE NOSOTROS</a>
             <a href="{{ route('contact') }}" class="hover:text-gray-300 transition-colors">CONTACTO</a>
-            <a href="{{ route('login') }}" class="hover:text-gray-300 transition-colors">INICIAR SESIÓN</a>
+            @auth()
+                <div class=" flex items-center gap-x-2">
+                    <img src="{{ Auth::user()->avatar }}" alt="" class=" w-[30px] h-[30px] rounded-full object-cover">
+                    <a href="{{ route('auth.profile') }}" class="hover:text-gray-300 transition-colors">MI PERFIL</a>
+                </div>
+            @else
+                <a href="{{ route('login') }}" class="hover:text-gray-300 transition-colors">INICIAR SESIÓN</a>
+            @endauth
         </div>
     </div>
 
@@ -31,7 +38,14 @@
         <a href="{{ route('discover') }}">DESCUBRIR</a>
         <a href="{{ route('aboutus') }}">SOBRE NOSOTROS</a>
         <a href="{{ route('contact') }}">CONTACTO</a>
-        <a href="{{ route('login') }}">INICIAR SESIÓN</a>
+        @auth
+            <div class=" flex items-center gap-x-2">
+                <img src="{{ Auth::user()->avatar }}" alt="" class=" w-[30px] h-[30px] rounded-full object-cover">
+                <a href="{{ route('auth.profile') }}" class="">MI PERFIL</a>
+            </div>
+        @else
+            <a href="{{ route('login') }}" class="">INICIAR SESIÓN</a>
+        @endauth
     </div>
 </nav>
 
@@ -39,7 +53,7 @@
     // Precargar URLs de los iconos
     const menuIcon = `{{ asset('build/assets/menu.svg') }}`;
     const closeMenuIcon = `{{ asset('build/assets/closemenu.svg') }}`;
-    
+
     // Precargar la imagen del menú de cierre
     const preloadCloseMenu = new Image();
     preloadCloseMenu.src = closeMenuIcon;
