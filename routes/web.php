@@ -44,10 +44,25 @@ Route::get('/google-auth/callback', function () {
 
         Auth::login($user);
 
-        session()->flash('success', '¡Has iniciado sesión exitosamente con Google!');
-        return redirect()->route('login');
+        // session()->flash('success', '¡Has iniciado sesión exitosamente con Google!');
+        // return redirect()->route('login');
+        return redirect()->route('auth.profile');
     } catch (\Exception $e) {
         // Si hay error, redirigir al login con mensaje
         return redirect()->route('login')->with('error', 'Error al iniciar sesión con Google. Inténtalo de nuevo.');
     }
 });
+
+Route::get('/facebook-auth/redirect', function () {
+    return Socialite::driver('facebook')->redirect();
+});
+
+Route::get('/facebook-auth/callback', function () {
+    $user_facebook = Socialite::driver('facebook')->user();
+
+    // $user->token
+});
+
+// Auth Pages
+Route::get('profile', [AuthController::class, 'profile'])->name('auth.profile')->middleware('auth');
+Route::post('logout', [AuthController::class, 'logout'])->name('auth.logout')->middleware('auth');
