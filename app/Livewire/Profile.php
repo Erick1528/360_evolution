@@ -22,8 +22,27 @@ class Profile extends Component
     public $showError = false;
 
     protected $rules = [
-        'name' => 'required|string|max:255',
-        'newAvatar' => 'nullable|image|mimes:jpeg,jpg,png,gif,webp|max:2048', // 2MB max, formatos específicos
+        'name' => 'required|string|min:2|max:255',
+        'newAvatar' => 'nullable|image|mimes:jpeg,jpg,png,gif,webp|max:2048|dimensions:min_width=50,min_height=50,max_width=5000,max_height=5000',
+    ];
+
+    protected $messages = [
+        // Mensajes para el campo 'name'
+        'name.required' => 'El nombre es obligatorio.',
+        'name.string' => 'El nombre debe ser texto válido.',
+        'name.min' => 'El nombre debe tener al menos 2 caracteres.',
+        'name.max' => 'El nombre no puede tener más de 255 caracteres.',
+        
+        // Mensajes para el campo 'newAvatar'
+        'newAvatar.image' => 'El archivo debe ser una imagen válida.',
+        'newAvatar.mimes' => 'La imagen debe ser de tipo: JPEG, JPG, PNG, GIF o WebP.',
+        'newAvatar.max' => 'La imagen no puede ser mayor a 2MB.',
+        'newAvatar.uploaded' => 'Error al subir la imagen. Inténtalo de nuevo.',
+        'newAvatar.file' => 'Debe seleccionar un archivo válido.',
+        'newAvatar.dimensions' => 'La imagen debe tener entre 50x50 y 5000x5000 píxeles.',
+        'newAvatar.distinct' => 'La imagen ya ha sido seleccionada.',
+        'newAvatar.between' => 'El tamaño de la imagen debe estar entre 1KB y 2MB.',
+        'newAvatar.required_if' => 'Debe seleccionar una imagen.',
     ];
 
     public function mount()
