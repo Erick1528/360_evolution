@@ -4,6 +4,8 @@ use App\Http\Controllers\AboutUsController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DiscoverController;
+use App\Http\Controllers\PrivacyController;
+use App\Http\Controllers\TermsController;
 use Illuminate\Support\Facades\Route;
 use Laravel\Socialite\Facades\Socialite;
 use App\Models\User;
@@ -17,10 +19,14 @@ Route::get('/', function () {
 Route::get('aboutus', [AboutUsController::class, 'index'])->name('aboutus');
 Route::get('discover', [DiscoverController::class, 'index'])->name('discover');
 Route::get('contact', [ContactController::class, 'index'])->name('contact');
+Route::get('privacy', [PrivacyController::class, 'index'])->name('privacy');
+Route::get('terms', [TermsController::class, 'index'])->name('terms');
 
 // Auth
 Route::get('login', [AuthController::class, 'login'])->name('login');
 Route::get('register', [AuthController::class, 'register'])->name('register');
+Route::get('profile', [AuthController::class, 'profile'])->name('auth.profile')->middleware('auth');
+Route::post('logout', [AuthController::class, 'logout'])->name('auth.logout')->middleware('auth');
 
 Route::get('/google-auth/redirect', function () {
     // Forzar nueva selección de cuenta y limpiar caché
@@ -62,7 +68,3 @@ Route::get('/facebook-auth/callback', function () {
 
     // $user->token
 });
-
-// Auth Pages
-Route::get('profile', [AuthController::class, 'profile'])->name('auth.profile')->middleware('auth');
-Route::post('logout', [AuthController::class, 'logout'])->name('auth.logout')->middleware('auth');
