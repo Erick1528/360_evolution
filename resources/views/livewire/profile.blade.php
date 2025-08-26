@@ -231,20 +231,35 @@ px-[20px] py-[40px] font-[playfair]">
                                         {{-- Preview de la imagen (cuando hay imagen seleccionada) --}}
                                         @if ($newAvatar)
                                             <div
-                                                class="flex items-center gap-x-[15px] p-[15px] bg-[#F0F9FF] rounded-[10px] border border-[#0369A1] border-opacity-30">
-                                                <div class="w-[60px] h-[60px] rounded-full overflow-hidden bg-[#E5E7EB]">
+                                                class="flex items-center gap-x-[10px] sm:gap-x-[15px] p-[12px] sm:p-[15px] bg-[#F0F9FF] rounded-[10px] border border-[#0369A1] border-opacity-30">
+                                                <div class="w-[50px] h-[50px] sm:w-[60px] sm:h-[60px] rounded-full overflow-hidden bg-[#E5E7EB] flex-shrink-0">
                                                     <img src="{{ $newAvatar->temporaryUrl() }}" alt="Preview"
                                                         class="w-full h-full object-cover">
                                                 </div>
-                                                <div class="flex-1">
-                                                    <p class="text-[14px] leading-[17px] text-[#0369A1] font-semibold">
-                                                        Nueva imagen seleccionada</p>
-                                                    <p class="text-[12px] leading-[14px] text-[#6B7280] mt-[2px]">
-                                                        {{ $newAvatar->getClientOriginalName() }}</p>
+                                                <div class="flex-1 min-w-0">
+                                                    <p class="hidden xs:block text-[12px] sm:text-[14px] leading-[14px] sm:leading-[17px] text-[#0369A1] font-semibold truncate">
+                                                        Nueva imagen seleccionada
+                                                    </p>
+                                                    <p class="text-[10px] sm:text-[12px] leading-[12px] sm:leading-[14px] text-[#6B7280] mt-[2px] truncate">
+                                                        @php
+                                                            $fileName = $newAvatar->getClientOriginalName();
+                                                            $extension = pathinfo($fileName, PATHINFO_EXTENSION);
+                                                            $nameWithoutExt = pathinfo($fileName, PATHINFO_FILENAME);
+                                                            
+                                                            // Limitar a 8 caracteres el nombre + extensión
+                                                            if (strlen($nameWithoutExt) > 8) {
+                                                                $shortName = substr($nameWithoutExt, 0, 5) . '**';
+                                                            } else {
+                                                                $shortName = $nameWithoutExt;
+                                                            }
+                                                            $displayName = $shortName . '.' . $extension;
+                                                        @endphp
+                                                        {{ $displayName }}
+                                                    </p>
                                                 </div>
                                                 <button type="button" wire:click="$set('newAvatar', null)"
-                                                    class="text-[#EF4444] hover:text-white hover:bg-[#EF4444] hover:bg-opacity-90 rounded-full p-2 transition-all duration-200 cursor-pointer">
-                                                    <svg class="w-[16px] h-[16px]" fill="currentColor"
+                                                    class="text-[#EF4444] hover:text-white hover:bg-[#EF4444] hover:bg-opacity-90 rounded-full p-1 sm:p-2 transition-all duration-200 cursor-pointer flex-shrink-0">
+                                                    <svg class="w-[14px] h-[14px] sm:w-[16px] sm:h-[16px]" fill="currentColor"
                                                         viewBox="0 0 20 20">
                                                         <path fill-rule="evenodd"
                                                             d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
