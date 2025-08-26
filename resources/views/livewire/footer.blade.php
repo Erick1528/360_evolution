@@ -7,7 +7,9 @@ bg-[#0F355E] px-[20px] py-[40px] font-[playfair] flex flex-col gap-y-[40px]">
         <div class=" md:items-start md:justify-start
         flex flex-col items-center justify-center">
             <img src="{{ asset('build/assets/logo.svg') }}" alt="Logo de Evolución 360°" class=" h-[116px]">
-            <p class=" text-[rgba(255,255,255,0.7)] italic text-[12px]">Semillas de conocimiento, cosechas de esperanza.
+            <p class=" sm:text-left text-center
+            text-[rgba(255,255,255,0.7)] italic text-[12px]">Semillas de
+                conocimiento, cosechas de esperanza.
             </p>
         </div>
 
@@ -98,8 +100,10 @@ bg-[#0F355E] px-[20px] py-[40px] font-[playfair] flex flex-col gap-y-[40px]">
         <p>&copy; 2025 Global Editorial EA. Derechos reservados.</p>
 
         <div class=" flex gap-x-[20px]">
-            <p>Privacidad</p>
-            <p>Términos</p>
+            <a href="{{ route('privacy') }}"
+                class="hover:text-white hover:scale-105 transition-all duration-300 ease-in-out">Privacidad</a>
+            <a href="{{ route('terms') }}"
+                class="hover:text-white hover:scale-105 transition-all duration-300 ease-in-out">Términos</a>
         </div>
     </div>
 
