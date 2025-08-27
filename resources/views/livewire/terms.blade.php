@@ -21,6 +21,9 @@ px-[20px] py-[40px] font-[playfair]">
                 text-[14px] leading-[17px]">
                     Condiciones de uso y contratación de productos y servicios de Global Editorial EA
                 </p>
+                <p class="lg:text-[12px] lg:leading-[14px] text-[11px] leading-[13px] text-[#6B7280] font-medium">
+                    Última actualización: 27 de agosto de 2025
+                </p>
             </div>
 
             {{-- Contenido principal --}}
@@ -70,6 +73,27 @@ px-[20px] py-[40px] font-[playfair]">
                                     </p>
                                     <p class="lg:text-[14px] lg:leading-[17px] text-[13px] leading-[16px] text-[#374151]">
                                         Global Editorial EA se reserva el derecho de modificar estos términos en cualquier momento. Los cambios entrarán en vigor inmediatamente tras su publicación.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        {{-- Información Legal de la Empresa --}}
+                        <div class="border-l-4 border-[#0369A1] bg-[#F0F9FF] rounded-r-[10px] px-[20px] py-[18px]">
+                            <div class="flex items-start gap-x-[12px]">
+                                <div class="w-[40px] h-[40px] bg-[#0369A1] rounded-full flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-[20px] h-[20px] text-white" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm3 1h6v4H7V5zm8 8v2a1 1 0 01-1 1H6a1 1 0 01-1-1v-2h8z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <div class="flex-1">
+                                    <p class="text-[12px] leading-[14px] text-[#6B7280] font-medium uppercase tracking-wide mb-[8px]">
+                                        Responsable Legal
+                                    </p>
+                                    <p class="lg:text-[14px] lg:leading-[17px] text-[13px] leading-[16px] text-[#374151]">
+                                        <strong>Global Editorial EA</strong><br>
+                                        San Pedro Sula, Cortés, Honduras<br>
+                                        Email: info@globaleditorialea.com
                                     </p>
                                 </div>
                             </div>

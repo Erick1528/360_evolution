@@ -21,6 +21,9 @@ px-[20px] py-[40px] font-[playfair]">
                 text-[14px] leading-[17px]">
                     Información sobre el tratamiento de datos y uso de cookies en Global Editorial EA
                 </p>
+                <p class="lg:text-[12px] lg:leading-[14px] text-[11px] leading-[13px] text-[#6B7280] font-medium">
+                    Última actualización: 27 de agosto de 2025
+                </p>
             </div>
 
             {{-- Contenido principal --}}
@@ -71,8 +74,67 @@ px-[20px] py-[40px] font-[playfair]">
                                         Finalidad y Protección de Datos
                                     </p>
                                     <p class="lg:text-[14px] lg:leading-[17px] text-[13px] leading-[16px] text-[#374151]">
-                                        Todos los datos recopilados son tratados con la máxima confidencialidad. Global Editorial EA no vende, alquila ni comercializa información personal.
+                                        Todos los datos recopilados son tratados con la máxima confidencialidad. Global Editorial EA no vende, alquila ni comercializa información personal a ninguna persona o entidad externa.
                                     </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        {{-- Datos Recopilados --}}
+                        <div class="border-l-4 border-[#8B5CF6] bg-[#F5F3FF] rounded-r-[10px] px-[20px] py-[18px]">
+                            <div class="flex items-start gap-x-[12px]">
+                                <div class="w-[40px] h-[40px] bg-[#8B5CF6] rounded-full flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-[20px] h-[20px] text-white" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <div class="flex-1">
+                                    <p class="text-[12px] leading-[14px] text-[#6B7280] font-medium uppercase tracking-wide mb-[8px]">
+                                        Datos Personales Recopilados
+                                    </p>
+                                    <div class="lg:text-[14px] lg:leading-[17px] text-[13px] leading-[16px] text-[#374151]">
+                                        <p class="mb-[12px]">Los siguientes datos personales son recopilados y almacenados de forma segura:</p>
+                                        <ul class="space-y-[6px] ml-[16px] list-disc">
+                                            <li><strong>Nombre completo:</strong> Para identificación y personalización del servicio</li>
+                                            <li><strong>Dirección de correo electrónico:</strong> Para comunicación y acceso a la cuenta</li>
+                                            <li><strong>Avatar o imagen de perfil:</strong> Para personalización de la experiencia de usuario</li>
+                                            <li><strong>ID de proveedor OAuth:</strong> Para autenticación segura con Google u otros proveedores</li>
+                                            <li><strong>Contraseña encriptada:</strong> Almacenada con hash seguro para protección de la cuenta</li>
+                                            <li><strong>Fecha de creación de cuenta:</strong> Para control de actividad y auditoría de seguridad</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {{-- Autenticación OAuth --}}
+                        <div class="border-l-4 border-[#DC2626] bg-[#FEF2F2] rounded-r-[10px] px-[20px] py-[18px]">
+                            <div class="flex items-start gap-x-[12px]">
+                                <div class="w-[40px] h-[40px] bg-[#DC2626] rounded-full flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-[20px] h-[20px] text-white" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <div class="flex-1">
+                                    <p class="text-[12px] leading-[14px] text-[#6B7280] font-medium uppercase tracking-wide mb-[8px]">
+                                        Autenticación OAuth y Proveedores Externos
+                                    </p>
+                                    <div class="lg:text-[14px] lg:leading-[17px] text-[13px] leading-[16px] text-[#374151]">
+                                        <p class="mb-[12px]">Utilizamos servicios de autenticación OAuth seguros para facilitar el acceso a nuestros servicios:</p>
+                                        <ul class="space-y-[6px] ml-[16px] list-disc mb-[12px]">
+                                            <li><strong>Google OAuth:</strong> Para autenticación segura mediante cuentas de Google</li>
+                                            <li><strong>Datos mínimos:</strong> Solo accedemos a información básica del perfil (nombre, email, foto)</li>
+                                            <li><strong>Sin acceso a datos sensibles:</strong> No accedemos a emails, contactos u otros datos privados</li>
+                                            <li><strong>Revocación:</strong> Los usuarios pueden revocar el acceso en cualquier momento desde su panel de Google (myaccount.google.com → Seguridad → Aplicaciones de terceros)</li>
+                                        </ul>
+                                        <p><strong>Importante:</strong> Global Editorial EA cumple con las políticas de privacidad de Google y otros proveedores OAuth utilizados. Los usuarios tienen control total para desautorizar nuestra aplicación directamente desde su cuenta de Google.</p>
+                                        <div class="mt-[12px] p-[12px] bg-[#FEF3C7] border-l-4 border-[#F59E0B] rounded-r-[8px]">
+                                            <p class="text-[12px] leading-[14px] font-medium text-[#92400E] mb-[6px]">¿Qué pasa al revocar acceso desde Google?</p>
+                                            <p class="text-[12px] leading-[14px] text-[#92400E]">
+                                                Al revocar el acceso desde Google se bloquea inmediatamente el login con OAuth, pero los datos permanecen en nuestra base de datos sin ser utilizados para absolutamente nada. Estos datos inactivos no son procesados, compartidos ni utilizados en ninguna operación.
+                                            </p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
