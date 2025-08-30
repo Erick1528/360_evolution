@@ -232,20 +232,23 @@ px-[20px] py-[40px] font-[playfair]">
                                         @if ($newAvatar)
                                             <div
                                                 class="flex items-center gap-x-[10px] sm:gap-x-[15px] p-[12px] sm:p-[15px] bg-[#F0F9FF] rounded-[10px] border border-[#0369A1] border-opacity-30">
-                                                <div class="w-[50px] h-[50px] sm:w-[60px] sm:h-[60px] rounded-full overflow-hidden bg-[#E5E7EB] flex-shrink-0">
+                                                <div
+                                                    class="w-[50px] h-[50px] sm:w-[60px] sm:h-[60px] rounded-full overflow-hidden bg-[#E5E7EB] flex-shrink-0">
                                                     <img src="{{ $newAvatar->temporaryUrl() }}" alt="Preview"
                                                         class="w-full h-full object-cover">
                                                 </div>
                                                 <div class="flex-1 min-w-0">
-                                                    <p class="hidden xs:block text-[12px] sm:text-[14px] leading-[14px] sm:leading-[17px] text-[#0369A1] font-semibold truncate">
+                                                    <p
+                                                        class="hidden xs:block text-[12px] sm:text-[14px] leading-[14px] sm:leading-[17px] text-[#0369A1] font-semibold truncate">
                                                         Nueva imagen seleccionada
                                                     </p>
-                                                    <p class="text-[10px] sm:text-[12px] leading-[12px] sm:leading-[14px] text-[#6B7280] mt-[2px] truncate">
+                                                    <p
+                                                        class="text-[10px] sm:text-[12px] leading-[12px] sm:leading-[14px] text-[#6B7280] mt-[2px] truncate">
                                                         @php
                                                             $fileName = $newAvatar->getClientOriginalName();
                                                             $extension = pathinfo($fileName, PATHINFO_EXTENSION);
                                                             $nameWithoutExt = pathinfo($fileName, PATHINFO_FILENAME);
-                                                            
+
                                                             // Limitar a 8 caracteres el nombre + extensión
                                                             if (strlen($nameWithoutExt) > 8) {
                                                                 $shortName = substr($nameWithoutExt, 0, 5) . '**';
@@ -259,8 +262,8 @@ px-[20px] py-[40px] font-[playfair]">
                                                 </div>
                                                 <button type="button" wire:click="$set('newAvatar', null)"
                                                     class="text-[#EF4444] hover:text-white hover:bg-[#EF4444] hover:bg-opacity-90 rounded-full p-1 sm:p-2 transition-all duration-200 cursor-pointer flex-shrink-0">
-                                                    <svg class="w-[14px] h-[14px] sm:w-[16px] sm:h-[16px]" fill="currentColor"
-                                                        viewBox="0 0 20 20">
+                                                    <svg class="w-[14px] h-[14px] sm:w-[16px] sm:h-[16px]"
+                                                        fill="currentColor" viewBox="0 0 20 20">
                                                         <path fill-rule="evenodd"
                                                             d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
                                                             clip-rule="evenodd"></path>
@@ -273,16 +276,36 @@ px-[20px] py-[40px] font-[playfair]">
                                                 <input wire:model="newAvatar" type="file" accept="image/*"
                                                     id="avatar-upload"
                                                     class="absolute inset-0 w-full h-full opacity-0 cursor-pointer">
-                                                <div
+
+                                                {{-- Estado normal --}}
+                                                <div wire:loading.remove wire:target="newAvatar"
                                                     class="flex items-center justify-center px-[15px] py-[12px] h-[50px] rounded-[10px] border-[2px] border-dashed border-[#0F355E] hover:bg-[#F8FAFC] transition-colors duration-200 cursor-pointer">
-                                                    <div class="flex items-center gap-x-[8px]">
-                                                        <svg class="w-[20px] h-[20px] text-[#0F355E]" fill="none"
-                                                            stroke="currentColor" viewBox="0 0 24 24">
+                                                    <div
+                                                        class="flex items-center gap-x-[8px] min-w-[140px] justify-center">
+                                                        <svg class="w-[20px] h-[20px] text-[#0F355E] flex-shrink-0"
+                                                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                             <path stroke-linecap="round" stroke-linejoin="round"
                                                                 stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
                                                         </svg>
-                                                        <p class="text-[14px] leading-[17px] text-[#0F355E] font-medium">
+                                                        <p
+                                                            class="text-[14px] leading-[17px] text-[#0F355E] font-medium whitespace-nowrap">
                                                             Seleccionar imagen
+                                                        </p>
+                                                    </div>
+                                                </div>
+
+                                                {{-- Estado de carga --}}
+                                                <div wire:loading wire:target="newAvatar"
+                                                    class="flex items-center justify-center px-[15px] py-[12px] h-[50px] rounded-[10px] border-[2px] border-dashed border-[#0369A1] bg-[#F0F9FF] cursor-not-allowed">
+                                                    <div
+                                                        class="flex items-center gap-x-[8px] min-w-[140px] justify-center">
+                                                        {{-- Spinner animado --}}
+                                                        <div
+                                                            class="animate-spin rounded-full h-[20px] w-[20px] border-b-2 border-[#0369A1] flex-shrink-0">
+                                                        </div>
+                                                        <p
+                                                            class="text-[14px] leading-[17px] text-[#0369A1] font-medium whitespace-nowrap">
+                                                            Procesando imagen...
                                                         </p>
                                                     </div>
                                                 </div>
@@ -333,7 +356,8 @@ px-[20px] py-[40px] font-[playfair]">
                                 {{-- Botones del formulario --}}
                                 <div class="flex flex-col gap-y-[10px] sm:flex-row sm:gap-x-[15px] sm:gap-y-0 pt-[10px]">
                                     {{-- Botón Guardar --}}
-                                    <button wire:click="updateProfile" type="button"
+                                    <button wire:click="updateProfile" type="button" wire:loading.attr="disabled"
+                                        wire:target="updateProfile"
                                         class="group sm:flex-1 bg-[#0F355E] hover:cursor-pointer lg:px-[25px] lg:py-[10px] lg:text-[16px] lg:leading-[19px]
                                         hover:bg-white text-white font-bold rounded-[25px] px-[20px] py-[10px] text-[14px] leading-[17px]
                                         border-2 border-[#0F355E] relative overflow-hidden transition-colors duration-500 ease-in-out
@@ -343,20 +367,38 @@ px-[20px] py-[40px] font-[playfair]">
                                         after:absolute after:top-0 after:right-0 after:w-[60%] after:h-full after:bg-[#0F355E]
                                         after:transition-transform after:duration-500 after:ease-in-out hover:after:translate-x-full after:z-10
                                         after:transform after:-skew-x-12
-                                        hover:text-[#0F355E] flex justify-center items-center gap-x-[8px]">
-                                        <svg class="group-hover:hidden relative transition-none z-20 w-[16px] h-[16px] text-white"
-                                            fill="currentColor" viewBox="0 0 20 20">
-                                            <path fill-rule="evenodd"
-                                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                                clip-rule="evenodd"></path>
-                                        </svg>
-                                        <svg class="hidden group-hover:block relative transition-none z-20 w-[16px] h-[16px] text-[#0F355E]"
-                                            fill="currentColor" viewBox="0 0 20 20">
-                                            <path fill-rule="evenodd"
-                                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                                clip-rule="evenodd"></path>
-                                        </svg>
-                                        <span class="relative z-20 transition-none">Guardar</span>
+                                        hover:text-[#0F355E] flex justify-center items-center gap-x-[8px] disabled:opacity-75 disabled:cursor-not-allowed">
+
+                                        {{-- Contenedor con posición relativa --}}
+                                        <div class="relative z-20 min-w-[80px] h-[20px]">
+                                            {{-- Estados normales (iconos) --}}
+                                            <div wire:loading.remove wire:target="updateProfile"
+                                                class="absolute top-0 left-0 right-0 bottom-0 flex items-center gap-x-[8px] justify-center">
+                                                <svg class="group-hover:hidden w-[16px] h-[16px] text-white flex-shrink-0"
+                                                    fill="currentColor" viewBox="0 0 20 20">
+                                                    <path fill-rule="evenodd"
+                                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                        clip-rule="evenodd"></path>
+                                                </svg>
+                                                <svg class="hidden group-hover:block w-[16px] h-[16px] text-[#0F355E] flex-shrink-0"
+                                                    fill="currentColor" viewBox="0 0 20 20">
+                                                    <path fill-rule="evenodd"
+                                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                        clip-rule="evenodd"></path>
+                                                </svg>
+                                                <span class="transition-none whitespace-nowrap leading-none">Guardar</span>
+                                            </div>
+
+                                            {{-- Estado de carga --}}
+                                            <div wire:loading wire:target="updateProfile"
+                                                class="absolute top-[-14px] left-0 right-0 bottom-0 flex items-center gap-x-[8px] justify-center">
+                                                <div
+                                                    class="animate-spin rounded-full h-[16px] w-[16px] border-b-2 border-white flex-shrink-0">
+                                                </div>
+                                                <span
+                                                    class="transition-none whitespace-nowrap leading-none">Guardando...</span>
+                                            </div>
+                                        </div>
                                     </button>
 
                                     {{-- Botón Cancelar --}}
